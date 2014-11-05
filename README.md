@@ -19,22 +19,16 @@ Also, a range of boards for a given Turn may be selected. To look at only layout
 
 Furthermore, a one-way path finder display may be toggled on or off, by entering 'P'. When results are viewed with this on, empty spaces in board now list the layout number of the next Turn that the board will resemble if the next player plays on that space. For instance, the only board for Turn 0 will look a bit like this:
 
- 1 | 2 | 1
----+---+--
- 2 | 3 | 2
----+---+--
- 1 | 2 | 1
+http://cl.ly/image/3c2b3o26372n
 
- Layout 1-1
+This means if the first player plays in a corner, they are going into Layout 1-1 (Turn 1, Layout 1). If they play in a side, they are going to Layout 1-2, and if they play in the middle they are going into Layout 1-3. Keep in mind that the program notes rotated boards and mirrored boards that match up as identical, and only keeps a reference for the first one reached. Layout 1-1 in my program shows an X in the upper left corner, but the board is functionally the same as if X had been played in any corner. The difference is only relative to how it looks on the screen.
 
- This means if the first player plays in a corner, they are going into Layout 1-1 (Turn 1, Layout 1). If they play in a side, they are going to Layout 1-2, and if they play in the middle they are going into Layout 1-3. Keep in mind that the program notes rotated boards and mirrored boards that match up as identical, and only keeps a reference for the first one reached. Layout 1-1 in my program shows an X in the upper left corner, but the board is functionally the same as if X had been played in any corner. The difference is only relative to how it looks on the screen.
+Also, it may be of interest to see what the winning boards are. Entering 'W' will toggle checking if a board has won when it's displayed, which is a handy refernce so you don't have to figure it out for yourself constantly. Keep in mind that a winning game is logically impossible before Turn 5. A more direct approach is to enter 'X', 'O', or 'T', each of which will show all winning layouts for X, all winning layouts for O, and all layouts where there is a tie, respectively. The results may surprise you!
 
- Also, it may be of interest to see what the winning boards are. Entering 'W' will toggle checking if a board has won when it's displayed, which is a handy refernce so you don't have to figure it out for yourself constantly. Keep in mind that a winning game is logically impossible before Turn 5. A more direct approach is to enter 'X', 'O', or 'T', each of which will show all winning layouts for X, all winning layouts for O, and all layouts where there is a tie, respectively. The results may surprise you!
+History
+-------
+I first made this project over about a month, in July 2012. Though it is only shortly after my third version of Dragon Fighter RPG, there is a vast difference in quality, which is somewhat due to this being heavily planned by hand, and Dragon Fighter V3 being a slight remake. I have also updated this program much more, splitting it up into four files instead of one big confusing file, and cleaning up code where I've seen fit, mostly in the usability area. But originally it *did* do everything that it did right- the generation code has been untouched, for instance!
 
- History
- -------
- I first made this project over about a month, in July 2012. Though it is only shortly after my third version of Dragon Fighter RPG, there is a vast difference in quality, which is somewhat due to this being heavily planned by hand, and Dragon Fighter V3 being a slight remake. I have also updated this program much more, splitting it up into four files instead of one big confusing file, and cleaning up code where I've seen fit, mostly in the usability area. But originally it *did* do everything that it did right- the generation code has been untouched, for instance!
+My approach to creating it was toying with the idea of wanting to tackle down a game completely. I had recently realized how difficult it would be for a computer to compute every single chess board layout, but I realized a much simpler domain was available: Tic Tac Toe. Before I got tangled up in code that I didn't understand, I started by drawing out legal board layouts. I quickly realized an important distinction: though it may be immediately apparent than the first player in Tic Tac Toe has 9 options, they truly only have 3: a corner, a side, or the middle (see above for an illustration of this).
 
- My approach to creating it was toying with the idea of wanting to tackle down a game completely. I had recently realized how difficult it would be for a computer to compute every single chess board layout, but I realized a much simpler domain was available: Tic Tac Toe. Before I got tangled up in code that I didn't understand, I started by drawing out legal board layouts. I quickly realized an important distinction: though it may be immediately apparent than the first player in Tic Tac Toe has 9 options, they truly only have 3: a corner, a side, or the middle (see above for an illustration of this).
-
- After doing the first three player turns by hand, I decided I had enough of manual labour (Turn 3 has 38 unique boards, geeze!) and started planning out the current program, developed it over about a month, and recently came back to it to clean it up and present it to the world.
+After doing the first three player turns by hand, I decided I had enough of manual labour (Turn 3 has 38 unique boards, geeze!) and started planning out the current program, developed it over about a month, and recently came back to it to clean it up and present it to the world.
