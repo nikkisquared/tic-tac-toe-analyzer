@@ -17,17 +17,13 @@ The first and last two are straightforward enough, but the second method is more
 
 Also, a range of boards for a given Turn may be selected. To look at only layouts 10 through 20 for Turn 3, you can enter "3-10:20" to specify that. Likewise, "5-25:60" looks up Turn 5 and displays layouts 25 through 60. This lets users sift through selective parts of turns, rather than trying to parse up to hundreds of layouts at once.
 
-Furthermore, a one-way path finder display may be toggled on or off, by entering 'P'. When results are viewed with this on, empty spaces in board now list the layout number of the next Turn that the board will resemble if the next player plays on that space. For instance, the only board for Turn 0 will look a bit like this:
+Furthermore, a one-way path finder display may be toggled on or off, by entering 'P'. When results are viewed with this on, empty spaces in board now list the layout number of the next Turn that the board will resemble if the next player plays on that space. For instance, the only board for Turn 0 will look something like this (lines denoting row spacing removed because it messes up here):
 
  1 | 2 | 1
----+---+--
  2 | 3 | 2
----+---+--
  1 | 2 | 1
 
- Layout 1-1
-
- This means if the first player plays in a corner, they are going into Layout 1-1 (Turn 1, Layout 1). If they play in a side, they are going to Layout 1-2, and if they play in the middle they are going into Layout 1-3. Keep in mind that the program notes rotated boards and mirrored boards that match up as identical, and only keeps a reference for the first one reached. Layout 1-1 in my program shows an X in the upper left corner, but the board is functionally the same as if X had been played in any corner. The difference is only relative to how it looks on the screen.
+This means if the first player plays in a corner, they are going into Layout 1-1 (Turn 1, Layout 1). If they play in a side, they are going to Layout 1-2, and if they play in the middle they are going into Layout 1-3. Keep in mind that the program notes rotated boards and mirrored boards that match up as identical, and only keeps a reference for the first one reached. Layout 1-1 in my program shows an X in the upper left corner, but the board is functionally the same as if X had been played in any corner. The difference is only relative to how it looks on the screen.
 
  Also, it may be of interest to see what the winning boards are. Entering 'W' will toggle checking if a board has won when it's displayed, which is a handy refernce so you don't have to figure it out for yourself constantly. Keep in mind that a winning game is logically impossible before Turn 5. A more direct approach is to enter 'X', 'O', or 'T', each of which will show all winning layouts for X, all winning layouts for O, and all layouts where there is a tie, respectively. The results may surprise you!
 
