@@ -17,12 +17,12 @@ The first and last two are straightforward enough, but the second method is more
 
 Also, a range of boards for a given Turn may be selected. To look at only layouts 10 through 20 for Turn 3, you can enter "3-10:20" to specify that. Likewise, "5-25:60" looks up Turn 5 and displays layouts 25 through 60. This lets users sift through selective parts of turns, rather than trying to parse up to hundreds of layouts at once.
 
-Furthermore, a one-way path finder display may be toggled on or off, by entering 'P'. When results are viewed with this on, empty spaces in board now list the layout number of the next Turn that the board will resemble if the next player plays on that space. For instance, the only board for Turn 0 will look like this:
+Furthermore, a one-way path finder display may be toggled on or off, by entering 'P'. When results are viewed with this on, empty spaces in board now list the layout number of the next Turn that the board will resemble if the next player plays on that space. For instance, the only board for Turn 0 will look a bit like this:
 
  1 | 2 | 1
------------
+---+---+--
  2 | 3 | 2
------------
+---+---+--
  1 | 2 | 1
 
  Layout 1-1
