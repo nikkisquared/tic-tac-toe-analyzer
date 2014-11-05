@@ -3,6 +3,9 @@
 # represents data for a tic tac toe board with functions to modify it, compare boards, and display it
 
 class Board(str):
+    # inherits string because this is what the board is represented by:
+    # a 9 character string, where each character is a ' ', 'X', or 'O'
+    # ' ' for any empty board spaces, 'X' for spaces X played on, and 'O' for spaces O played on
     
     def __new__(cls, layout='         ', p=0, paths=[]):
         obj = str.__new__(cls, layout)

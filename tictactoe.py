@@ -184,8 +184,9 @@ def menu(game):
 	"""lets the user examine tic tac toe boards by a variety of methods until they quit"""
 
 	helpText = (
-				"\nYou can enter multiple commands at once by seperating them with a space"
 				"\nCommands are noted by the character to enter inside a pair of brackest ex. (S) means the (S)tats command"
+				"\nThough they are listed in uppercase, commands can be typed in lowercase too"
+				"\nYou can enter multiple commands at once by seperating them with a space"
 				"\n\nEnter a number to see layouts for those turns (0 through 9), or view (A)ll at once"
 				"\nYou can enter a turn number followed by a \"-\" and a specific board number to see only that board ex. \"3-24\""
 				"\nEnter \":\" and another board number after that to inclusively show all boards inbetween those ex. \"6-8:20\""
@@ -203,7 +204,7 @@ def menu(game):
 
 	while not quit:
 
-		choice = raw_input("\nEnter 'C' to see the list of commands, and enter any here.\n").upper()
+		choice = raw_input("\nEnter a command (enter 'C' for a list of commands)\n> ").upper()
 		for c in choice.split(' '):
 
 			if c == 'C':
@@ -212,12 +213,12 @@ def menu(game):
 			# prints every layout for a given turn
 			elif c.isdigit():
 				for t in c:
-					print "\nShowing all possible states for turn %s." % t
+					print "\nShowing all possible states for Turn %s." % t
 					print make_boards(game[int(t)], paths, showWin)
 			# prints every layouts possible
 			elif c == 'A':
 				for t in range(0, 10):
-					print "\nShowing all possible states for turn %s." % t
+					print "\nShowing all possible states for Turn %s." % t
 					print make_boards(game[t], paths, showWin)
 			# prints a single layout, or a selected range of layouts
 			elif len(c) >= 3 and c[1] == '-':
@@ -227,7 +228,7 @@ def menu(game):
 					c = c + ':' + c[2:]
 				output, success = make_range(game, c, paths, showWin)
 				if success:
-					print ("\nShowing a %sstate%s from turn %s." 
+					print ("\nShowing a %sstate%s from Turn %s." 
 							% ("selection of " * rangeSelected, 's' * rangeSelected, c[0]))
 				print output
 			
@@ -253,15 +254,15 @@ def menu(game):
 			elif c == 'P':
 				paths = not paths
 				if paths:
-					print "\nGame paths will now be shown."
+					print "\nGame Paths will now be shown."
 				else:
-					print "\nGame paths will no longer be shown."
+					print "\nGame Paths will no longer be shown."
 			elif c == 'W':
 				showWin = not showWin
 				if showWin:
-					print "\nDisplayed boards will now check for a winning game."
+					print "\nDisplayed boards will now check for a Winning game."
 				else:
-					print "\nDisplayed boards will no longer check for a winning game."
+					print "\nDisplayed boards will no longer check for a Winning game."
 			# quits the program after breaking out of checking more inputs
 			elif c == 'Q':
 				quit = True
