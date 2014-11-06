@@ -46,18 +46,24 @@ class Board(str):
                 # and columns offset this by 0 to 2 spaces
                 toAdd = self[row * 3 + col]
 
-                # ii wanted, adds the path instead of a blank
+                # if wanted, adds the path instead of a blank
                 if paths and toAdd == ' ' and not self.check_win()[0]:
                     toAdd = str(self.paths[row * 3 + col])
 
                 # paths may be 1 to 3 digits, so this makes sure they fit into empty spots perfectly
-                if len(toAdd) == 1: board += " %s " % toAdd
-                elif len(toAdd) == 2: board += " %s" % toAdd
-                else: board += "%s" % toAdd
+                if len(toAdd) == 1:
+                    board += " %s " % toAdd
+                elif len(toAdd) == 2:
+                    board += " %s" % toAdd
+                else:
+                    board += "%s" % toAdd
+
                 # puts dividers between game spaces
-                if col != 2: board += "|"
+                if col != 2:
+                    board += "|"
                 # end of the row reached
-                else: board += "\n"
+                else:
+                    board += "\n"
 
             if row != 2: board += "-----------\n"
             
