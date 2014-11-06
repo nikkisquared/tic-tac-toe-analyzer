@@ -5,6 +5,7 @@
 import random
 from board import Board
 
+
 def get_input(msg, wanted):
     """keeps the user in a loop until they enter wanted input"""
     while True:
